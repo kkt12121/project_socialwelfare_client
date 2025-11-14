@@ -1,4 +1,5 @@
-import { Navigation } from "../components/Navigation";
+import { TopNavigation } from "../components/TopNavigation";
+import { FooterNavigation } from "../components/FooterNavigation";
 import { Footer } from "../components/Footer";
 
 export function RootLayout({ children }: { children: React.ReactNode }) {
@@ -9,7 +10,7 @@ export function RootLayout({ children }: { children: React.ReactNode }) {
           <span className="absolute p-4 left-0 top-0 h-[50px]">
             재가복지센터
           </span>
-          <Navigation />
+          <TopNavigation />
         </div>
       </header>
       <main className="m-auto">
