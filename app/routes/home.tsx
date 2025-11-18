@@ -2,11 +2,12 @@ import type { Route } from "./+types/home";
 import { Welcome } from "../welcome/welcome";
 import { RootLayout } from "../layouts/RootLayout";
 import { MainBanner } from "~/layouts/MainBanner";
+import { ServiceInfo } from "~/components/ServiceInfo";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "가담재가복지센터" },
+    { name: "가담재가복지센터", content: "가담재가복지센터에 오신 것을 환영합니다" },
   ];
 }
 
@@ -15,6 +16,7 @@ export default function Home() {
     <RootLayout>
       <div className="m-auto w-3/4 border-2">
         <MainBanner />
+        <ServiceInfo />
         <Welcome />
       </div>
     </RootLayout>
