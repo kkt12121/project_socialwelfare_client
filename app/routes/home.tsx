@@ -1,6 +1,7 @@
 import type { Route } from "./+types/home";
 import { Welcome } from "../welcome/welcome";
 import { RootLayout } from "../layouts/RootLayout";
+import { MainBanner } from "~/layouts/MainBanner";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -12,7 +13,10 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   return (
     <RootLayout>
-      <Welcome />
+      <div className="m-auto w-3/4 border-2">
+        <MainBanner />
+        <Welcome />
+      </div>
     </RootLayout>
   );
 }
