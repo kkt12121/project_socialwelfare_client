@@ -4,7 +4,7 @@ import { BgWhiteButton } from "../components/ui/BgWhiteButton"
 
 export function MainBanner(){
     return(
-    <div className="h-[552px] border-2 bg-brandMainGreenBanner flex justify-center items-center">
+    <div className="h-[552px] bg-brandMainGreenBanner flex justify-center items-center">
         <div className="w-[45%] h-[400px] flex flex-col justify-between">
             <div className="text-brandGreenBannerText font-bold">함께하는 일상</div>
             <div className="font-bold text-5xl">안심되는 돌봄, 집에서 계속</div>
