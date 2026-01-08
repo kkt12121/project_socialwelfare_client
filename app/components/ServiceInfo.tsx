@@ -1,6 +1,6 @@
 export function ServiceInfo() {
   return (
-    <div className="h-[400px] flex justify-center items-center">
+    <div className="h-[400px] border border-gray-300 flex justify-center items-center">
       <div className="w-[80%]">
         <div className="pl-6 pb-6 font-bold text-2xl">서비스 안내</div>
         <div>
