@@ -6,9 +6,9 @@ export function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen w-full bg-white m-auto">
       <header className="relative w-full bg-gray-800 text-white h-[50px]">
-        <div className="relative w-3/4 h-[50px] m-auto">
+        <div className="relative w-3/4 h-[50px] ml-15">
           <span className="absolute p-4 left-0 top-0 h-[50px]">
-            재가복지센터
+            가담재가복지센터
           </span>
           <TopNavigation />
         </div>
