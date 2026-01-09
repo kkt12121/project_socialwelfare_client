@@ -9,6 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./styles/normalize.css";
+import "./styles/tailwind.css";
 import "./app.css";
 
 export const links: Route.LinksFunction = () => [
