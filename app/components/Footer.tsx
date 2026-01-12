@@ -1,4 +1,4 @@
-import { FooterNavigation } from "./FooterNavigation"
+import { FooterNavigation } from "./FooterNavigation";
 
 export function Footer() {
   return (
@@ -7,8 +7,8 @@ export function Footer() {
         <div className="w-[70%]">
           <div className="mb-5 font-bold text-[26px]">가담재가복지센터</div>
           <div className="text-gray-500 text-sm w-full">
-            주소: 강원도 원주시 무실동 주공6단지 606동 1401호 | 전화:
-            010-2775-2271 | 이메일: gallove@gmail.com
+            주소: 강원특별자치도 원주시 만대로 148 | 전화: 033-746-7579 |
+            이메일: topgold777@daum.net
           </div>
         </div>
         <div className="w-[30%] self-center">
