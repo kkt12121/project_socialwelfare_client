@@ -11,9 +11,9 @@ export function CareBannerImage({ className = "" }: CareBannerImageProps) {
       }
     >
       <img
-        src="/images/main_banner_img.png"
+        src="/images/gdc_banner.png"
         alt="편안한 집에서 돌봄을 받는 어르신과 요양보호사 일러스트"
-        className="h-full w-full object-cover"
+        className="h-full w-full"
       />
     </div>
   );
