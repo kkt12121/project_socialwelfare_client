@@ -9,7 +9,7 @@ export function TopNavigation() {
       <Link to="/about" className="text-white hover:text-gray-300">
         센터소개
       </Link>
-       {/* ✅ 서비스안내 + 드롭다운 */}
+      {/* ✅ 서비스안내 + 드롭다운 */}
       <div className="relative group">
         <Link
           to="/service/homecare"
@@ -39,10 +39,26 @@ export function TopNavigation() {
 
             <ul className="p-2">
               {[
-                { to: "/service/homecare", label: "방문요양", desc: "방문요양 지원서비스" },
-                { to: "/service/grade", label: "등급신청", desc: "장기요양 등급 안내" },
-                { to: "/service/fee", label: "이용요금", desc: "비용/본인부담금" },
-                { to: "/service/caregiver", label: "요양보호사", desc: "모집/지원 안내" },
+                {
+                  to: "/service/homecare",
+                  label: "방문요양",
+                  desc: "방문요양 지원서비스",
+                },
+                {
+                  to: "/service/grade",
+                  label: "등급신청",
+                  desc: "장기요양 등급 안내",
+                },
+                {
+                  to: "/service/fee",
+                  label: "이용요금",
+                  desc: "비용/본인부담금",
+                },
+                {
+                  to: "/service/caregiver",
+                  label: "요양보호사",
+                  desc: "모집/지원 안내",
+                },
               ].map((item) => (
                 <li key={item.to}>
                   <Link
@@ -86,7 +102,7 @@ export function TopNavigation() {
           <div className="h-2" />
         </div>
       </div>
-      <Link to="/contact" className="text-white hover:text-gray-300">
+      <Link to="/notice" className="text-white hover:text-gray-300">
         공지사항
       </Link>
       <Link to="/contact" className="text-white hover:text-gray-300">
