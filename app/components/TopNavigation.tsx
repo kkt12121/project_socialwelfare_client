@@ -105,7 +105,7 @@ export function TopNavigation() {
       <Link to="/notice" className="text-white hover:text-gray-300">
         공지사항
       </Link>
-      <Link to="/contact" className="text-white hover:text-gray-300">
+      <Link to="/map" className="text-white hover:text-gray-300">
         오시는길
       </Link>
     </nav>
