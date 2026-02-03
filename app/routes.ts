@@ -6,4 +6,5 @@ export default [
   route("service/homecare", "routes/homecare.tsx"),
   route("notice/", "routes/notice.tsx"),
   route("/notice/:id", "routes/noticedetail.tsx"),
+  route("/map", "routes/map.tsx"),
 ] satisfies RouteConfig;
