@@ -15,6 +15,11 @@ export function meta({}: Route.MetaArgs) {
       name: "가담재가복지센터",
       content: "가담재가복지센터에 오신 것을 환영합니다",
     },
+    {
+      tagName: "link",
+      rel: "icon",
+      href: "/images/gadamIcon.jpg",
+    },
   ];
 }
 
