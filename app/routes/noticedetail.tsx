@@ -1,6 +1,22 @@
 import { useParams, useNavigate } from "react-router";
 import { RootLayout } from "../layouts/RootLayout";
 import { NOTICE_DATA } from "../../public/contents/notice";
+import type { Route } from "./+types/home";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "가담재가복지센터" },
+    {
+      name: "가담재가복지센터",
+      content: "가담재가복지센터에 오신 것을 환영합니다",
+    },
+    {
+      tagName: "link",
+      rel: "icon",
+      href: "/images/gadamIcon.jpg",
+    },
+  ];
+}
 
 export default function NoticeDetail() {
   const { id } = useParams();
