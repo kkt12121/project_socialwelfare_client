@@ -107,7 +107,7 @@ export default function Grade() {
             </p>
           </div>
 
-          <div className="bg-yellow-50 border rounded-xl p-6 shadow">
+          <div className="bg-white border-l-4 border-green-500 rounded-xl p-6">
             <ul className="space-y-3 text-gray-700">
               {[
                 "신청자의 일반사항",
@@ -116,7 +116,7 @@ export default function Grade() {
                 "간호처치 영역",
                 "재활 영역 및 기타",
               ].map((item, i) => (
-                <li key={i} className="flex gap-3">
+                <li key={i} className="flex gap-3 font-bold">
                   <span className="text-red-500 font-bold">✓</span>
                   {item}
                 </li>
