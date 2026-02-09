@@ -7,6 +7,7 @@ export default [
   route("/service/homecare", "routes/homecare.tsx"),
   route("/service/grade", "routes/grade.tsx"),
   route("/service/fee", "routes/fee.tsx"),
+  route("/service/caregiver", "routes/caregiver.tsx"),
   route("/notice", "routes/notice.tsx"),
   route("/notice/:id", "routes/noticedetail.tsx"),
   route("/map", "routes/map.tsx"),
