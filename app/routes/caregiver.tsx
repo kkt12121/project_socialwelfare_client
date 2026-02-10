@@ -71,7 +71,7 @@ export default function CareGiver() {
           </div>
         </section>
 
-        <section className="py-20">
+        <section className="pb-28">
           <div className="max-w-5xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-gray-800">
               요양보호사란?
