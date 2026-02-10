@@ -95,7 +95,7 @@ export default function Map() {
             <p>
               <span className="font-bold text-gray-900">주소: </span>
               <span className="text-gray-800 font-light">
-                강원특별자치도 원주시 만대로 148
+                강원특별자치도 원주시 만대로 148 2층
               </span>
             </p>
             <p>
