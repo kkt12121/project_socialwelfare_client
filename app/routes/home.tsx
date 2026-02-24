@@ -51,14 +51,8 @@ export default function Home() {
     };
   }, []);
 
-  // 동그라미 클릭 시 이동 로직
-  const scrollToSection = (index: number) => {
-    const sectionElements = document.querySelectorAll(".snap-section");
-    sectionElements[index].scrollIntoView({ behavior: "smooth" });
-  };
-
   const handleMoveToService = () => {
-    navigate("/service/homecare"); // 가고자 하는 경로 입력
+    navigate("/service/homecare");
   };
 
   const handleChange = (
@@ -84,12 +78,11 @@ export default function Home() {
           {SECTIONS.map((section, idx) => (
             <button
               key={section.id}
-              onClick={handleMoveToService}
               className="group relative flex items-center justify-end"
             >
-              <span className="absolute right-8 px-2 py-1 rounded bg-gray-800 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+              {/* <span className="absolute right-8 px-2 py-1 rounded bg-gray-800 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                 {section.label}
-              </span>
+              </span> */}
               <div
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   activeSection === idx
@@ -331,7 +324,7 @@ export default function Home() {
                         <span className="text-gray-400 text-sm font-normal uppercase tracking-wider">
                           EaiL.
                         </span>
-                        topgold777@daum.net
+                        gadam148@daum.net
                       </div>
 
                       <div className="text-white font-bold text-lg flex items-center gap-2">

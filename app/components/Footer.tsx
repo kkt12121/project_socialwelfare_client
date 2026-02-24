@@ -16,7 +16,7 @@ export function Footer() {
                 <span className="text-gray-400 text-sm font-normal uppercase tracking-wider">
                   EaiL.
                 </span>
-                topgold777@daum.net
+                gadam148@daum.net
               </div>
 
               <div className="text-white font-bold text-lg flex items-center gap-2">
