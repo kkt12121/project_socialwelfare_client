@@ -2,7 +2,6 @@ import type { Route } from "./+types/home";
 import { useNavigate } from "react-router";
 import { useEffect, useState, useRef } from "react";
 import { RootLayout } from "../layouts/RootLayout";
-import { Footer } from "../components/Footer";
 import emailjs from "@emailjs/browser";
 import { CareBannerImage } from "~/components/CareBannerImage";
 import { BgGreenButton } from "../components/ui/BgGreenButton";
@@ -27,6 +26,7 @@ const SECTIONS = [
   { id: "intro", label: "서비스 소개" },
   { id: "cta", label: "상담 안내" },
   { id: "apply", label: "상담 신청" },
+  { id: "footer", label: "푸터 정보" },
 ];
 
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
@@ -324,8 +324,77 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="snap-section h-auto min-h-[200px] snap-start bg-slate-50">
-            <Footer />
+          <section
+            id="footer"
+            className="snap-section h-full w-full snap-start bg-gray-900 flex items-center justify-center px-6"
+          >
+            <div className="max-w-6xl w-full flex flex-col md:flex-row justify-between items-start md:items-end gap-12 pb-10">
+              <div className="space-y-8">
+                <div className="space-y-2">
+                  <h3 className="text-3xl font-black text-white tracking-tighter">
+                    가담재가복지센터
+                  </h3>
+                  <p className="text-emerald-500 font-bold tracking-widest text-sm uppercase">
+                    Gadam Care Center
+                  </p>
+                </div>
+
+                <div className="space-y-3 text-gray-400 text-sm md:text-base leading-relaxed">
+                  <p className="flex flex-col md:flex-row md:gap-4">
+                    <span>강원특별자치도 원주시 만대로 148 201호</span>
+                    <span className="hidden md:inline text-gray-700">|</span>
+                    <span>대표자: 김기훈</span>
+                  </p>
+                  <p>사업자등록번호: 620-80-28046</p>
+
+                  <div className="pt-4 space-y-4">
+                    <div className="flex items-center gap-4">
+                      <span className="text-[10px] font-bold bg-gray-800 px-2 py-1 rounded text-gray-500 uppercase tracking-tighter">
+                        Email
+                      </span>
+                      <span className="text-white font-medium md:text-lg">
+                        topgold777@naver.com
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <span className="text-[10px] font-bold bg-gray-800 px-2 py-1 rounded text-gray-500 uppercase tracking-tighter">
+                        Tel
+                      </span>
+                      <span className="text-white font-black text-2xl md:text-3xl tracking-tight">
+                        033-746-7579
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <a
+                  href="https://blog.naver.com/gadam7579"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 bg-[#03C75A] text-white px-8 py-4 rounded-2xl text-lg font-extrabold hover:bg-[#02b351] transition-all shadow-xl hover:-translate-y-1"
+                >
+                  <span className="bg-white text-[#03C75A] w-6 h-6 flex items-center justify-center rounded text-xs font-black">
+                    N
+                  </span>
+                  공식 블로그 방문하기
+                </a>
+
+                <p className="text-xs text-gray-600 font-medium">
+                  Copyright © 2026 Gadam Care Center. All rights reserved.
+                </p>
+              </div>
+
+              <div className="flex flex-col items-start md:items-end gap-6 w-full md:w-auto border-t border-gray-800 pt-8 md:border-none">
+                <div className="flex gap-8 text-sm font-bold">
+                  <button className="text-gray-500 hover:text-white transition-colors">
+                    이용약관
+                  </button>
+                  <button className="text-emerald-500 underline underline-offset-8">
+                    개인정보처리방침
+                  </button>
+                </div>
+              </div>
+            </div>
           </section>
         </div>
       </div>
