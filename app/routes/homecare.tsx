@@ -1,4 +1,20 @@
+import type { Route } from "./+types/home";
 import { RootLayout } from "../layouts/RootLayout";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "가담재가복지센터" },
+    {
+      name: "가담재가복지센터",
+      content: "가담재가복지센터에 오신 것을 환영합니다",
+    },
+    {
+      tagName: "link",
+      rel: "icon",
+      href: "/images/gadamIcon.jpg",
+    },
+  ];
+}
 
 export default function HomeCare() {
   return (
@@ -11,7 +27,7 @@ export default function HomeCare() {
           <div className="absolute bottom-0 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-mint-200/20 blur-3xl" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-6 pb-28">
+        <div className="relative mx-auto max-w-7xl px-6 pt-20 pb-28">
           {/* HERO */}
           <section className="pt-14 pb-16">
             <div className="grid items-center gap-10 lg:grid-cols-2">
@@ -31,8 +47,11 @@ export default function HomeCare() {
 
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600">
                   요양보호사가 어르신의 가정을 방문하여
-                  <span className="font-semibold text-slate-800"> 신체·일상·정서</span>까지
-                  균형 있게 지원하는 장기요양보험 서비스입니다.
+                  <span className="font-semibold text-slate-800">
+                    {" "}
+                    신체·일상·정서
+                  </span>
+                  까지 균형 있게 지원하는 장기요양보험 서비스입니다.
                 </p>
 
                 <div className="mt-8 flex flex-wrap items-center gap-3 relative z-50">
@@ -40,7 +59,9 @@ export default function HomeCare() {
                     href="/service/apply"
                     className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold text-slate-800 bg-emerald-600 hover:bg-emerald-700 shadow-sm transition relative"
                   >
-                    <span className="text-emerald-300"><IconPhone /></span>
+                    <span className="text-emerald-300">
+                      <IconPhone />
+                    </span>
                     상담 신청하기
                   </a>
 
@@ -55,9 +76,33 @@ export default function HomeCare() {
 
                 {/* 한줄 요약 카드 */}
                 <div className="mt-10 grid gap-4 sm:grid-cols-3">
-                  <MiniStat icon={<span className="text-rose-500"><IconHeart /></span>} title="정서 지원" desc="말벗·소통" />
-                  <MiniStat icon={<span className="text-emerald-800"><IconCar /></span>} title="이동 도움" desc="외출 동행" />
-                  <MiniStat icon={<span className="text-blue-400"><IconHome /></span>} title="가정 내 돌봄" desc="일상 유지" />
+                  <MiniStat
+                    icon={
+                      <span className="text-rose-500">
+                        <IconHeart />
+                      </span>
+                    }
+                    title="정서 지원"
+                    desc="말벗·소통"
+                  />
+                  <MiniStat
+                    icon={
+                      <span className="text-emerald-800">
+                        <IconCar />
+                      </span>
+                    }
+                    title="이동 도움"
+                    desc="외출 동행"
+                  />
+                  <MiniStat
+                    icon={
+                      <span className="text-blue-400">
+                        <IconHome />
+                      </span>
+                    }
+                    title="가정 내 돌봄"
+                    desc="일상 유지"
+                  />
                 </div>
               </div>
 
@@ -83,7 +128,10 @@ export default function HomeCare() {
                       <InfoPill icon={<IconCheck />} text="1~5등급 대상" />
                       <InfoPill icon={<IconCheck />} text="가정 방문 돌봄" />
                       <InfoPill icon={<IconCheck />} text="맞춤 서비스 계획" />
-                      <InfoPill icon={<IconCheck />} text="전문 요양보호사 배정" />
+                      <InfoPill
+                        icon={<IconCheck />}
+                        text="전문 요양보호사 배정"
+                      />
                     </div>
                   </div>
                 </div>
@@ -108,7 +156,10 @@ export default function HomeCare() {
                   "가족 돌봄 부담을 줄이고 싶은 경우",
                   "집에서 안정적으로 돌봄을 받고 싶은 경우",
                 ].map((t) => (
-                  <li key={t} className="flex items-start gap-3 rounded-2xl bg-white/60 p-4">
+                  <li
+                    key={t}
+                    className="flex items-start gap-3 rounded-2xl bg-white/60 p-4"
+                  >
                     <span className="mt-1.5 rounded-full bg-mint-500/15 p-1 text-mint-700">
                       <IconCheck />
                     </span>
@@ -119,12 +170,11 @@ export default function HomeCare() {
             </CardSoft>
 
             <CardDark>
-              <h3 className="text-lg font-semibold text-white">
-                한 줄 요약
-              </h3>
+              <h3 className="text-lg font-semibold text-white">한 줄 요약</h3>
               <p className="mt-3 text-white/80 leading-relaxed">
-                생활환경을 유지하면서 <span className="text-white font-semibold">신체·가사·정서</span>를
-                균형 있게 지원해, 가장 활용도가 높은 장기요양 서비스입니다.
+                생활환경을 유지하면서{" "}
+                <span className="text-white font-semibold">신체·가사·정서</span>
+                를 균형 있게 지원해, 가장 활용도가 높은 장기요양 서비스입니다.
               </p>
 
               <div className="mt-6 flex flex-col gap-3">
@@ -156,9 +206,13 @@ export default function HomeCare() {
           <section className="mb-18">
             <div className="mb-8 flex items-end justify-between gap-4">
               <div>
-                <h2 className="text-2xl font-semibold text-slate-900">제공 서비스</h2>
+                <h2 className="text-2xl font-semibold text-slate-900">
+                  제공 서비스
+                </h2>
                 <p className="mt-2 text-slate-600">
-                  필요한 영역만 선택해 <span className="font-semibold text-slate-800">맞춤형</span>으로 지원합니다.
+                  필요한 영역만 선택해{" "}
+                  <span className="font-semibold text-slate-800">맞춤형</span>
+                  으로 지원합니다.
                 </p>
               </div>
               <span className="hidden md:inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 text-sm text-slate-700">
@@ -172,21 +226,36 @@ export default function HomeCare() {
                 icon={<IconBath />}
                 title="신체활동 지원"
                 desc="안전한 위생·이동·배변을 돕습니다."
-                items={["세면·목욕·구강관리", "옷 갈아입기·몸단장", "이동 보조·체위 변경", "화장실 이용 도움"]}
+                items={[
+                  "세면·목욕·구강관리",
+                  "옷 갈아입기·몸단장",
+                  "이동 보조·체위 변경",
+                  "화장실 이용 도움",
+                ]}
               />
               <ServiceCard
                 tone="sky"
                 icon={<IconMeal />}
                 title="식사·가사 지원"
                 desc="식사와 생활 정돈을 지원합니다."
-                items={["식사 준비 및 보조", "간단 조리·설거지", "세탁 및 정리정돈", "생활공간 위생 관리"]}
+                items={[
+                  "식사 준비 및 보조",
+                  "간단 조리·설거지",
+                  "세탁 및 정리정돈",
+                  "생활공간 위생 관리",
+                ]}
               />
               <ServiceCard
                 tone="violet"
                 icon={<IconChat />}
                 title="정서·일상 지원"
                 desc="정서 안정과 일상 유지를 돕습니다."
-                items={["말벗·정서 교감", "외출 동행(병원·산책)", "일상 활동 보조", "안전 확인 및 소통"]}
+                items={[
+                  "말벗·정서 교감",
+                  "외출 동행(병원·산책)",
+                  "일상 활동 보조",
+                  "안전 확인 및 소통",
+                ]}
               />
             </div>
           </section>
@@ -195,7 +264,9 @@ export default function HomeCare() {
           <section className="mt-16 mb-20">
             <h2 className="text-2xl font-semibold text-slate-900">이용 절차</h2>
             <p className="mt-2 text-slate-600">
-              복잡하지 않아요. <span className="font-semibold text-slate-800">5단계</span>로 빠르게 시작합니다.
+              복잡하지 않아요.{" "}
+              <span className="font-semibold text-slate-800">5단계</span>로
+              빠르게 시작합니다.
             </p>
 
             <div className="mt-8 grid gap-4 md:grid-cols-5">
@@ -232,8 +303,8 @@ export default function HomeCare() {
                 <div>
                   <h3 className="text-3xl font-bold">상담 및 신청</h3>
                   <p className="mt-3 max-w-xl text-white/75 leading-relaxed">
-                    어르신 상황에 맞는 맞춤 돌봄을 안내해드립니다.
-                    전화/온라인 상담 모두 가능합니다.
+                    어르신 상황에 맞는 맞춤 돌봄을 안내해드립니다. 전화/온라인
+                    상담 모두 가능합니다.
                   </p>
                 </div>
 
@@ -276,11 +347,11 @@ function Badge({
   tone?: "mint" | "dark";
 }) {
   const cls =
-    tone === "dark"
-      ? "bg-slate-900 text-white"
-      : "bg-mint-100 text-mint-700";
+    tone === "dark" ? "bg-slate-900 text-white" : "bg-mint-100 text-mint-700";
   return (
-    <span className={`inline-flex items-center gap-2 rounded-full px-4 py-1 text-sm font-semibold ${cls}`}>
+    <span
+      className={`inline-flex items-center gap-2 rounded-full px-4 py-1 text-sm font-semibold ${cls}`}
+    >
       <span className="text-current">{icon}</span>
       {text}
     </span>
@@ -316,9 +387,17 @@ function MiniStat({
   );
 }
 
-function CardSoft({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+function CardSoft({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   return (
-    <div className={`rounded-3xl border border-white/20 bg-white/60 p-8 shadow-sm backdrop-blur ${className}`}>
+    <div
+      className={`rounded-3xl border border-white/20 bg-white/60 p-8 shadow-sm backdrop-blur ${className}`}
+    >
       {children}
     </div>
   );
@@ -361,7 +440,9 @@ function ServiceCard({
 
   return (
     <div className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white/70 p-7 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:shadow-lg">
-      <div className={`absolute inset-0 bg-gradient-to-br ${toneCls} opacity-60`} />
+      <div
+        className={`absolute inset-0 bg-gradient-to-br ${toneCls} opacity-60`}
+      />
       <div className="relative">
         <div className="flex items-start gap-4">
           <div className={`rounded-2xl p-3 ${iconBg}`}>{icon}</div>
@@ -415,20 +496,56 @@ function HeroImage() {
       <rect x="22" y="22" width="596" height="296" rx="24" fill="url(#g2)" />
 
       {/* 창문 */}
-      <rect x="420" y="70" width="150" height="110" rx="18" fill="rgba(16,185,129,0.15)" stroke="rgba(15,23,42,0.06)" />
+      <rect
+        x="420"
+        y="70"
+        width="150"
+        height="110"
+        rx="18"
+        fill="rgba(16,185,129,0.15)"
+        stroke="rgba(15,23,42,0.06)"
+      />
       <line x1="495" y1="70" x2="495" y2="180" stroke="rgba(15,23,42,0.06)" />
       <line x1="420" y1="125" x2="570" y2="125" stroke="rgba(15,23,42,0.06)" />
 
       {/* 인물(간단한 형태) */}
       {/* 어르신 */}
       <circle cx="250" cy="150" r="26" fill="rgba(248,113,113,0.18)" />
-      <rect x="215" y="178" width="110" height="95" rx="26" fill="rgba(15,23,42,0.08)" />
-      <rect x="232" y="200" width="76" height="60" rx="18" fill="rgba(255,255,255,0.85)" />
+      <rect
+        x="215"
+        y="178"
+        width="110"
+        height="95"
+        rx="26"
+        fill="rgba(15,23,42,0.08)"
+      />
+      <rect
+        x="232"
+        y="200"
+        width="76"
+        height="60"
+        rx="18"
+        fill="rgba(255,255,255,0.85)"
+      />
 
       {/* 보호사 */}
       <circle cx="350" cy="145" r="24" fill="rgba(59,130,246,0.18)" />
-      <rect x="320" y="170" width="100" height="105" rx="26" fill="rgba(16,185,129,0.20)" />
-      <rect x="335" y="205" width="70" height="58" rx="18" fill="rgba(255,255,255,0.85)" />
+      <rect
+        x="320"
+        y="170"
+        width="100"
+        height="105"
+        rx="26"
+        fill="rgba(16,185,129,0.20)"
+      />
+      <rect
+        x="335"
+        y="205"
+        width="70"
+        height="58"
+        rx="18"
+        fill="rgba(255,255,255,0.85)"
+      />
 
       {/* 하트 */}
       <path
@@ -437,15 +554,58 @@ function HeroImage() {
       />
 
       {/* 텍스트 느낌 장식 */}
-      <rect x="60" y="70" width="280" height="18" rx="9" fill="rgba(15,23,42,0.08)" />
-      <rect x="60" y="98" width="230" height="14" rx="7" fill="rgba(15,23,42,0.06)" />
-      <rect x="60" y="120" width="260" height="14" rx="7" fill="rgba(15,23,42,0.06)" />
+      <rect
+        x="60"
+        y="70"
+        width="280"
+        height="18"
+        rx="9"
+        fill="rgba(15,23,42,0.08)"
+      />
+      <rect
+        x="60"
+        y="98"
+        width="230"
+        height="14"
+        rx="7"
+        fill="rgba(15,23,42,0.06)"
+      />
+      <rect
+        x="60"
+        y="120"
+        width="260"
+        height="14"
+        rx="7"
+        fill="rgba(15,23,42,0.06)"
+      />
 
       {/* 하단 카드 느낌 */}
-      <rect x="60" y="235" width="500" height="60" rx="18" fill="rgba(16,185,129,0.10)" stroke="rgba(16,185,129,0.18)" />
+      <rect
+        x="60"
+        y="235"
+        width="500"
+        height="60"
+        rx="18"
+        fill="rgba(16,185,129,0.10)"
+        stroke="rgba(16,185,129,0.18)"
+      />
       <circle cx="95" cy="265" r="16" fill="rgba(16,185,129,0.35)" />
-      <rect x="125" y="252" width="180" height="12" rx="6" fill="rgba(15,23,42,0.10)" />
-      <rect x="125" y="270" width="140" height="10" rx="5" fill="rgba(15,23,42,0.08)" />
+      <rect
+        x="125"
+        y="252"
+        width="180"
+        height="12"
+        rx="6"
+        fill="rgba(15,23,42,0.10)"
+      />
+      <rect
+        x="125"
+        y="270"
+        width="140"
+        height="10"
+        rx="5"
+        fill="rgba(15,23,42,0.08)"
+      />
     </svg>
   );
 }
@@ -455,7 +615,11 @@ function HeroImage() {
 /* --------------------------- */
 
 function Icon({ children }: { children: React.ReactNode }) {
-  return <span className="inline-flex h-5 w-5 items-center justify-center">{children}</span>;
+  return (
+    <span className="inline-flex h-5 w-5 items-center justify-center">
+      {children}
+    </span>
+  );
 }
 
 function IconCheck() {
@@ -463,7 +627,13 @@ function IconCheck() {
     <span className="text-emerald-600">
       <Icon>
         <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-          <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+          <path
+            d="M20 6L9 17l-5-5"
+            stroke="currentColor"
+            strokeWidth="2.2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       </Icon>
     </span>
@@ -473,12 +643,7 @@ function IconCheck() {
 function IconCar() {
   return (
     <span className="inline-flex h-6 w-6 items-center justify-center text-emerald-600">
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        className="h-6 w-6"
-        aria-hidden
-      >
+      <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" aria-hidden>
         {/* 차체 하단 */}
         <path
           d="M3 13h18v3a2 2 0 0 1-2 2h-1a2 2 0 1 1-4 0H10a2 2 0 1 1-4 0H5a2 2 0 0 1-2-2v-3z"
@@ -515,7 +680,11 @@ function IconSpark() {
   return (
     <Icon>
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-        <path d="M12 2l1.2 5.2L18 9l-4.8 1.8L12 16l-1.2-5.2L6 9l4.8-1.8L12 2z" stroke="currentColor" strokeWidth="2" />
+        <path
+          d="M12 2l1.2 5.2L18 9l-4.8 1.8L12 16l-1.2-5.2L6 9l4.8-1.8L12 2z"
+          stroke="currentColor"
+          strokeWidth="2"
+        />
       </svg>
     </Icon>
   );
@@ -524,7 +693,11 @@ function IconShield() {
   return (
     <Icon>
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-        <path d="M12 2l8 4v6c0 5-3.5 9.4-8 10-4.5-.6-8-5-8-10V6l8-4z" stroke="currentColor" strokeWidth="2" />
+        <path
+          d="M12 2l8 4v6c0 5-3.5 9.4-8 10-4.5-.6-8-5-8-10V6l8-4z"
+          stroke="currentColor"
+          strokeWidth="2"
+        />
       </svg>
     </Icon>
   );
@@ -533,7 +706,11 @@ function IconPhone() {
   return (
     <Icon>
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-        <path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3 5.2 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L9.1 10.9a16 16 0 0 0 4 4l1.5-1.5a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6A2 2 0 0 1 22 16.9z" stroke="currentColor" strokeWidth="2" />
+        <path
+          d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3 5.2 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L9.1 10.9a16 16 0 0 0 4 4l1.5-1.5a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6A2 2 0 0 1 22 16.9z"
+          stroke="currentColor"
+          strokeWidth="2"
+        />
       </svg>
     </Icon>
   );
@@ -542,7 +719,11 @@ function IconDoc() {
   return (
     <Icon>
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" stroke="currentColor" strokeWidth="2" />
+        <path
+          d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"
+          stroke="currentColor"
+          strokeWidth="2"
+        />
         <path d="M14 2v6h6" stroke="currentColor" strokeWidth="2" />
       </svg>
     </Icon>
@@ -552,7 +733,12 @@ function IconPlan() {
   return (
     <Icon>
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-        <path d="M4 6h16M4 12h10M4 18h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        <path
+          d="M4 6h16M4 12h10M4 18h16"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
       </svg>
     </Icon>
   );
@@ -561,10 +747,26 @@ function IconUsers() {
   return (
     <Icon>
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" strokeWidth="2" />
-        <path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" stroke="currentColor" strokeWidth="2" />
-        <path d="M23 21v-2a4 4 0 0 0-3-3.9" stroke="currentColor" strokeWidth="2" />
-        <path d="M16 3.1a4 4 0 0 1 0 7.8" stroke="currentColor" strokeWidth="2" />
+        <path
+          d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+          stroke="currentColor"
+          strokeWidth="2"
+        />
+        <path
+          d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"
+          stroke="currentColor"
+          strokeWidth="2"
+        />
+        <path
+          d="M23 21v-2a4 4 0 0 0-3-3.9"
+          stroke="currentColor"
+          strokeWidth="2"
+        />
+        <path
+          d="M16 3.1a4 4 0 0 1 0 7.8"
+          stroke="currentColor"
+          strokeWidth="2"
+        />
       </svg>
     </Icon>
   );
@@ -574,8 +776,17 @@ function IconMoney() {
     <Icon>
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
         <path d="M3 7h18v10H3V7z" stroke="currentColor" strokeWidth="2" />
-        <path d="M7 12h.01M17 12h.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-        <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" stroke="currentColor" strokeWidth="2" />
+        <path
+          d="M7 12h.01M17 12h.01"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+        <path
+          d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+          stroke="currentColor"
+          strokeWidth="2"
+        />
       </svg>
     </Icon>
   );
@@ -584,7 +795,11 @@ function IconCare() {
   return (
     <Icon>
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-        <path d="M12 21s-7-4.5-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.5-9 9-9 9z" stroke="currentColor" strokeWidth="2" />
+        <path
+          d="M12 21s-7-4.5-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.5-9 9-9 9z"
+          stroke="currentColor"
+          strokeWidth="2"
+        />
       </svg>
     </Icon>
   );
@@ -593,8 +808,16 @@ function IconMap() {
   return (
     <Icon>
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-        <path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0z" stroke="currentColor" strokeWidth="2" />
-        <path d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" stroke="currentColor" strokeWidth="2" />
+        <path
+          d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0z"
+          stroke="currentColor"
+          strokeWidth="2"
+        />
+        <path
+          d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+          stroke="currentColor"
+          strokeWidth="2"
+        />
       </svg>
     </Icon>
   );
@@ -603,7 +826,11 @@ function IconHome() {
   return (
     <Icon>
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-        <path d="M3 10.5l9-8 9 8V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10.5z" stroke="currentColor" strokeWidth="2" />
+        <path
+          d="M3 10.5l9-8 9 8V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10.5z"
+          stroke="currentColor"
+          strokeWidth="2"
+        />
       </svg>
     </Icon>
   );
@@ -612,7 +839,11 @@ function IconHeart() {
   return (
     <Icon>
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-        <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 22l7.8-8.6 1-1a5.5 5.5 0 0 0 0-7.8z" stroke="currentColor" strokeWidth="2" />
+        <path
+          d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 22l7.8-8.6 1-1a5.5 5.5 0 0 0 0-7.8z"
+          stroke="currentColor"
+          strokeWidth="2"
+        />
       </svg>
     </Icon>
   );
@@ -621,7 +852,12 @@ function IconMove() {
   return (
     <Icon>
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-        <path d="M12 2v20M2 12h20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        <path
+          d="M12 2v20M2 12h20"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
       </svg>
     </Icon>
   );
@@ -651,9 +887,24 @@ function IconMeal() {
   return (
     <Icon>
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-        <path d="M4 3v7a4 4 0 0 0 4 4v7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-        <path d="M8 3v7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-        <path d="M14 3v10a4 4 0 0 0 4 4v4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        <path
+          d="M4 3v7a4 4 0 0 0 4 4v7"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+        <path
+          d="M8 3v7"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+        <path
+          d="M14 3v10a4 4 0 0 0 4 4v4"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
       </svg>
     </Icon>
   );
@@ -662,7 +913,11 @@ function IconChat() {
   return (
     <Icon>
       <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-        <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8z" stroke="currentColor" strokeWidth="2" />
+        <path
+          d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8z"
+          stroke="currentColor"
+          strokeWidth="2"
+        />
       </svg>
     </Icon>
   );

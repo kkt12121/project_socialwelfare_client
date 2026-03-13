@@ -86,7 +86,7 @@ export default function Map() {
   return (
     <RootLayout>
       <div className="m-auto w-full min-h-screen">
-        <div className="max-w-3xl mx-auto px-4 py-12">
+        <div className="max-w-3xl mx-auto px-4 py-20">
           <div className="border-b-2 border-gray-900 pb-4 mb-6">
             <h2 className="text-3xl font-bold text-gray-800">오시는길</h2>
           </div>
@@ -95,7 +95,7 @@ export default function Map() {
             <p>
               <span className="font-bold text-gray-900">주소: </span>
               <span className="text-gray-800 font-light">
-                강원특별자치도 원주시 만대로 148 2층
+                강원특별자치도 원주시 만대로 148 201호
               </span>
             </p>
             <p>
