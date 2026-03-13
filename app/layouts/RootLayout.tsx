@@ -35,7 +35,7 @@ export function RootLayout({ children, hideFooter }: RootLayoutProps) {
                 가담재가복지센터
               </span>
               <span className="text-[9px] md:text-[10px] text-emerald-600 font-bold tracking-widest mt-1 uppercase">
-                Home Care Service
+                Gadam Care Service
               </span>
             </div>
           </Link>
