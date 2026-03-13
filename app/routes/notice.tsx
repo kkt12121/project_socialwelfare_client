@@ -29,11 +29,11 @@ export default function Notice() {
 
   const visibleNotices = NOTICE_DATA.slice(0, itemsToShow);
   const isLastPage = itemsToShow >= NOTICE_DATA.length;
-
+  //12
   return (
     <RootLayout>
       <div className="m-auto w-full min-h-screen">
-        <div className="max-w-3xl mx-auto px-4 py-12">
+        <div className="max-w-3xl mx-auto px-4 py-20">
           <div className="border-b-2 border-gray-900 pb-4 mb-6">
             <h2 className="text-3xl font-bold text-gray-800">공지사항</h2>
             <p className="text-gray-500 mt-2">

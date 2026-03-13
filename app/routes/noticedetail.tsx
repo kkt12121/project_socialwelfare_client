@@ -40,7 +40,7 @@ export default function NoticeDetail() {
 
   return (
     <RootLayout>
-      <div className="max-w-3xl min-h-screen mx-auto px-4 py-12">
+      <div className="max-w-3xl min-h-screen mx-auto px-4 py-20">
         <article>
           <header className="mb-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-4">
