@@ -20,7 +20,7 @@ export default function CenterIntroduce() {
   return (
     <RootLayout>
       <div className="m-auto w-full">
-        <div className="bg-white">
+        <div className="bg-white pt-16">
           <section className="relative h-80 bg-white flex items-center justify-center overflow-hidden">
             <div className="absolute w-[120%] h-[150%] bg-emerald-100 -top-[50%] rounded-[40%] rotate-12 transition-transform duration-1000"></div>
 

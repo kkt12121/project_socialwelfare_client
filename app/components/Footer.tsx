@@ -8,7 +8,7 @@ export function Footer() {
           <h3 className="text-white font-bold text-xl">가담재가복지센터</h3>
 
           <div className="space-y-2 text-sm">
-            <p>강원특별자치도 원주시 만대로 148 2층 | 대표자: 김기훈</p>
+            <p>강원특별자치도 원주시 만대로 148 201호 | 대표자: 김기훈</p>
             <p>사업자등록번호: 620-80-28046</p>
 
             <div className="pt-2 flex flex-col gap-3">
@@ -16,7 +16,7 @@ export function Footer() {
                 <span className="text-gray-400 text-sm font-normal uppercase tracking-wider">
                   EaiL.
                 </span>
-                gadam148@daum.net
+                topgold777@naver.com
               </div>
 
               <div className="text-white font-bold text-lg flex items-center gap-2">
