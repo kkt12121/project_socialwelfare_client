@@ -107,7 +107,7 @@ export default function Fee() {
             방문요양 이용요금 계산기
           </h2>
 
-          <div className="bg-white rounded-2xl border p-6 space-y-6">
+          <div className="bg-white rounded-2xl border border-black p-6 space-y-6">
             <div>
               <label className="block font-semibold text-gray-700 mb-2">
                 방문 시간
@@ -115,7 +115,7 @@ export default function Fee() {
               <select
                 value={time}
                 onChange={(e) => setTime(Number(e.target.value))}
-                className="w-full border rounded-lg p-3"
+                className="w-full border border-black text-black rounded-lg p-3"
               >
                 <option value={30}>30분</option>
                 <option value={60}>60분</option>
@@ -135,7 +135,7 @@ export default function Fee() {
               <select
                 value={rate}
                 onChange={(e) => setRate(e.target.value)}
-                className="w-full border rounded-lg p-3"
+                className="w-full border border-black text-black rounded-lg p-3"
               >
                 <option value="normal">일반 (15%)</option>
                 <option value="reduced9">감경 (9%)</option>
@@ -176,20 +176,22 @@ export default function Fee() {
               {data.map((item, i) => (
                 <div
                   key={i}
-                  className="min-w-[280px] snap-start rounded-2xl border p-6 bg-white hover:shadow-md transition"
+                  className="min-w-[280px] snap-start rounded-2xl border border-black p-6 bg-white hover:shadow-md transition"
                 >
                   <h3 className="text-xl font-bold text-gray-800">
                     {item.grade}
                   </h3>
 
                   <p className="mt-3 text-sm text-gray-500">26년 한도액</p>
-                  <p className="font-semibold">{item.limit1}</p>
+                  <p className="text-black font-semibold">{item.limit1}</p>
 
                   <p className="mt-4 text-sm text-gray-600">25년 한도액</p>
-                  <p className="font-semibold">{item.limit2}</p>
+                  <p className="text-black font-semibold">{item.limit2}</p>
 
                   <p className="mt-4 text-sm text-gray-600">인상률</p>
-                  <p className="text-2xl font-bold">{item.increase}</p>
+                  <p className="text-black text-2xl font-bold">
+                    {item.increase}
+                  </p>
                 </div>
               ))}
             </div>

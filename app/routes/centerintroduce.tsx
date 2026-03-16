@@ -77,11 +77,13 @@ export default function CenterIntroduce() {
           <section className="py-20 bg-gray-50">
             <div className="max-w-6xl mx-auto px-4">
               <div className="flex flex-col md:flex-row gap-16">
-                <div className="md:w-1/3 sticky top-24">
+                <div>
                   <h2 className="text-5xl font-black text-emerald-300 tracking-tighter">
                     01
                   </h2>
-                  <h3 className="text-2xl font-bold mt-2">회사 비전</h3>
+                  <h3 className="text-2xl text-black font-bold mt-2">
+                    회사 비전
+                  </h3>
                   <p className="mt-4 text-gray-400">
                     어르신 가족 지역이 함께 신뢰하는
                     <br />
@@ -92,7 +94,7 @@ export default function CenterIntroduce() {
                   <div className="flex gap-6 p-6 rounded-3xl border border-white/20 bg-white/60 shadow-sm backdrop-blur">
                     <span className="text-2xl font-bold text-blue-200">1</span>
                     <div>
-                      <h4 className="font-bold text-lg">
+                      <h4 className="text-black font-bold text-lg">
                         신뢰받는 재가복지센터
                       </h4>
                       <p className="text-gray-500">
@@ -104,7 +106,7 @@ export default function CenterIntroduce() {
                   <div className="flex gap-6 p-6 rounded-3xl border border-white/20 bg-white/60 shadow-sm backdrop-blur">
                     <span className="text-2xl font-bold text-blue-200">2</span>
                     <div>
-                      <h4 className="font-bold text-lg">
+                      <h4 className="text-black font-bold text-lg">
                         삶의 질을 높이는 돌봄
                       </h4>
                       <p className="text-gray-500">
@@ -116,7 +118,7 @@ export default function CenterIntroduce() {
                   <div className="flex gap-6 p-6 rounded-3xl border border-white/20 bg-white/60 shadow-sm backdrop-blur">
                     <span className="text-2xl font-bold text-blue-200">3</span>
                     <div>
-                      <h4 className="font-bold text-lg">
+                      <h4 className="text-black font-bold text-lg">
                         지역과 함께 지속되는 돌봄
                       </h4>
                       <p className="text-gray-500">
@@ -135,11 +137,13 @@ export default function CenterIntroduce() {
               <h2 className="text-5xl font-black text-emerald-300 tracking-tighter">
                 02
               </h2>
-              <h2 className="text-3xl font-bold mb-10">센터 미션</h2>
+              <h2 className="text-3xl text-black font-bold mb-10">센터 미션</h2>
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="p-8 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div className="text-blue-500 text-4xl mb-4">🏘️</div>
-                  <h3 className="text-xl font-bold mb-2">어르신의 일상 유지</h3>
+                  <h3 className="text-xl text-black font-bold mb-2">
+                    어르신의 일상 유지
+                  </h3>
                   <p className="text-gray-500">
                     어르신이 평생 살아온 가정의 일상과 생활 리듬을 존중해, 낯선
                     변화 없이 안정적인 하루를 이어가실 수 있도록 돕습니다.
@@ -147,7 +151,9 @@ export default function CenterIntroduce() {
                 </div>
                 <div className="p-8 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div className="text-blue-500 text-4xl mb-4">🤲</div>
-                  <h3 className="text-xl font-bold mb-2">존엄과 선택의 존중</h3>
+                  <h3 className="text-xl text-black font-bold mb-2">
+                    존엄과 선택의 존중
+                  </h3>
                   <p className="text-gray-500">
                     어르신을 보호 대상이 아닌 삶의 주체로 존중하고, 작은
                     결정하나까지 스스로 선택할 수 있는 권리를 지켜 드립니다.
@@ -155,7 +161,7 @@ export default function CenterIntroduce() {
                 </div>
                 <div className="p-8 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div className="text-blue-500 text-4xl mb-4">👨‍👩‍👧‍👦</div>
-                  <h3 className="text-xl font-bold mb-2">
+                  <h3 className="text-xl text-black font-bold mb-2">
                     전문성과 신뢰기반 돌봄
                   </h3>
                   <p className="text-gray-500">
