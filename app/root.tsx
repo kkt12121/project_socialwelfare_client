@@ -2,12 +2,13 @@ import {
   isRouteErrorResponse,
   Links,
   Meta,
+  useLoaderData,
   Outlet,
   Scripts,
   ScrollRestoration,
 } from "react-router";
 import { Analytics } from "@vercel/analytics/react";
-
+import { authCookie } from "./utils/Auth";
 import type { Route } from "./+types/root";
 import "./styles/normalize.css";
 import "./styles/tailwind.css";
@@ -45,8 +46,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
+export const loader = async ({ request }: { request: Request }) => {
+  const cookieHeader = request.headers.get("Cookie");
+  const authData = await authCookie.parse(cookieHeader);
+
+  return { user: authData || null };
+};
+
 export default function App() {
-  return <Outlet />;
+  const { user } = useLoaderData<typeof loader>();
+  return <Outlet context={{ user }} />;
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
