@@ -11,4 +11,8 @@ export default [
   route("/notice", "routes/notice.tsx"),
   route("/notice/:id", "routes/noticedetail.tsx"),
   route("/map", "routes/map.tsx"),
+  route("/register", "routes/register.tsx"),
+  route("/login", "routes/login.tsx"),
+  route("/logout", "routes/logout.tsx"),
+  route("/reset-password", "routes/resetPassword.tsx"),
 ] satisfies RouteConfig;

@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useLocation, useRouteLoaderData, Form } from "react-router";
 
 interface MobileTopNavigationProps {
   isOpen: boolean;
@@ -9,6 +9,12 @@ export function MobileTopNavigation({
   isOpen,
   onClose,
 }: MobileTopNavigationProps) {
+  const rootData = useRouteLoaderData("root") as {
+    user: { userInfo: string } | null;
+  };
+
+  const user = rootData?.user;
+
   return (
     <div
       className={`fixed inset-0 bg-white transition-all duration-300 ease-in-out ${
@@ -113,15 +119,28 @@ export function MobileTopNavigation({
           </div>
         </nav>
 
-        {/* 하단 버튼 (절대 겹치지 않게 하단 패딩 확보) */}
-        {/* <div className="p-8 pb-12 bg-white shrink-0">
-          <a
-            href="tel:033-746-7579"
-            className="flex items-center justify-center w-full bg-emerald-600 text-white py-5 rounded-2xl font-black text-xl shadow-xl shadow-emerald-200"
-          >
-            전화 상담 바로연결
-          </a>
-        </div> */}
+        {user ? (
+          <div className="p-8 pb-12 shrink-0 text-xl font-bold">
+            <Form action="/logout" method="post">
+              <button
+                type="submit"
+                className="flex items-center justify-center w-full py-5 border border-emerald-600 rounded-2xl shadow-xl shadow-emerald-200"
+              >
+                로그아웃
+              </button>
+            </Form>
+          </div>
+        ) : (
+          <div className="p-8 pb-12 shrink-0 text-xl font-bold">
+            <Link
+              to="/login"
+              onClick={onClose}
+              className="flex items-center justify-center w-full py-5 border border-emerald-600 rounded-2xl shadow-xl shadow-emerald-200"
+            >
+              로그인
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
