@@ -1,7 +1,13 @@
-import { Link, useLocation } from "react-router";
+import { Link, useLocation, useRouteLoaderData, Form } from "react-router";
 
 export function TopNavigation() {
   const location = useLocation();
+
+  const rootData = useRouteLoaderData("root") as {
+    user: { userInfo: string } | null;
+  };
+
+  const user = rootData?.user;
 
   const navLinkStyle = (path: string) => `
     relative text-[16px] font-bold transition-all duration-300 px-1
@@ -67,6 +73,22 @@ export function TopNavigation() {
       <Link to="/map" className={navLinkStyle("/map")}>
         오시는길
       </Link>
+      {user ? (
+        <div className="flex items-center gap-5">
+          <Form action="/logout" method="post">
+            <button
+              type="submit"
+              className="text-[15px] font-bold text-slate-400 hover:text-emerald-300 transition-colors"
+            >
+              로그아웃
+            </button>
+          </Form>
+        </div>
+      ) : (
+        <Link to="/login" className={navLinkStyle("/login")}>
+          로그인
+        </Link>
+      )}
     </nav>
   );
 }
