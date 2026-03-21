@@ -1,4 +1,4 @@
-import { Link, useLocation, useRouteLoaderData, Form } from "react-router";
+import { Link, useRouteLoaderData, Form } from "react-router";
 
 interface MobileTopNavigationProps {
   isOpen: boolean;
@@ -22,10 +22,9 @@ export function MobileTopNavigation({
           ? "opacity-100 visible translate-y-0"
           : "opacity-0 invisible -translate-y-full"
       }`}
-      style={{ zIndex: 9999 }} // 최상위 레이어로 강제 고정
+      style={{ zIndex: 9999 }}
     >
       <div className="flex flex-col h-dvh w-full text-black bg-white overflow-hidden">
-        {/* 상단 닫기 버튼 레이어 (공간 확보) */}
         <div className="flex justify-end items-center px-8 h-20 bg-white shrink-0">
           <button
             onClick={onClose}
@@ -47,8 +46,7 @@ export function MobileTopNavigation({
           </button>
         </div>
 
-        {/* 메뉴 본문: justify-center로 중앙 정렬 */}
-        <nav className="flex-1 flex flex-col justify-center px-10 gap-8 bg-white overflow-y-auto">
+        <nav className="flex-1 overflow-y-auto px-10 py-10 flex flex-col gap-8">
           <div className="flex flex-col gap-5">
             <Link
               to="/"
@@ -65,7 +63,6 @@ export function MobileTopNavigation({
               센터소개
             </Link>
 
-            {/* 서비스 서브 메뉴 가이드라인 */}
             <div className="py-2 border-l-4 border-emerald-500 pl-6 my-2 flex flex-col gap-4">
               <span className="text-[12px] font-black text-emerald-600 uppercase tracking-widest">
                 Services
@@ -119,8 +116,8 @@ export function MobileTopNavigation({
           </div>
         </nav>
 
-        {user ? (
-          <div className="p-8 pb-12 shrink-0 text-xl font-bold">
+        <div className="p-8 pb-[calc(env(safe-area-inset-bottom)+2rem)] shrink-0 text-xl font-bold border-t border-slate-50">
+          {user ? (
             <Form action="/logout" method="post">
               <button
                 type="submit"
@@ -129,9 +126,7 @@ export function MobileTopNavigation({
                 로그아웃
               </button>
             </Form>
-          </div>
-        ) : (
-          <div className="p-8 pb-12 shrink-0 text-xl font-bold">
+          ) : (
             <Link
               to="/login"
               onClick={onClose}
@@ -139,8 +134,8 @@ export function MobileTopNavigation({
             >
               로그인
             </Link>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );
