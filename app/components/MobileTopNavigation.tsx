@@ -24,7 +24,7 @@ export function MobileTopNavigation({
       }`}
       style={{ zIndex: 9999 }} // 최상위 레이어로 강제 고정
     >
-      <div className="flex flex-col h-screen w-full bg-white overflow-hidden">
+      <div className="flex flex-col h-dvh w-full text-black bg-white overflow-hidden">
         {/* 상단 닫기 버튼 레이어 (공간 확보) */}
         <div className="flex justify-end items-center px-8 h-20 bg-white shrink-0">
           <button
@@ -120,7 +120,7 @@ export function MobileTopNavigation({
         </nav>
 
         {user ? (
-          <div className="p-8 pb-12 shrink-0 text-xl font-bold">
+          <div className="pl-8 pr-8 pb-25 shrink-0 text-xl font-bold">
             <Form action="/logout" method="post">
               <button
                 type="submit"
@@ -131,7 +131,7 @@ export function MobileTopNavigation({
             </Form>
           </div>
         ) : (
-          <div className="p-8 pb-12 shrink-0 text-xl font-bold">
+          <div className="pl-8 pr-8 pb-25 shrink-0 text-xl font-bold">
             <Link
               to="/login"
               onClick={onClose}
