@@ -48,7 +48,7 @@ export function FindPasswordModal({
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="example@mail.com"
-                  className="w-full px-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-emerald-500 outline-none transition-all placeholder:text-gray-300"
+                  className="w-full px-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl text-black focus:ring-2 focus:ring-emerald-500 outline-none transition-all placeholder:text-gray-300"
                 />
                 {error && (
                   <p className="mt-2 ml-1 text-xs text-red-500 font-semibold">

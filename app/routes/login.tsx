@@ -63,7 +63,7 @@ export default function Login() {
                   name="email"
                   onChange={handleInputChange}
                   placeholder="이메일을 입력해 주세요"
-                  className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all placeholder:text-gray-400"
+                  className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl text-black focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all placeholder:text-gray-400"
                 />
               </div>
 
@@ -76,7 +76,7 @@ export default function Login() {
                   name="password"
                   onChange={handleInputChange}
                   placeholder="••••••••"
-                  className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all placeholder:text-gray-400"
+                  className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl text-black focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all placeholder:text-gray-400"
                 />
               </div>
 

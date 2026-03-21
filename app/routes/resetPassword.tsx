@@ -66,7 +66,7 @@ export default function ResetPassword() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="8자 이상 입력"
-                    className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none transition-all"
+                    className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl text-black focus:ring-2 focus:ring-emerald-500 outline-none transition-all"
                   />
                 </div>
 
@@ -80,7 +80,7 @@ export default function ResetPassword() {
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
                     placeholder="다시 한번 입력"
-                    className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none transition-all"
+                    className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl text-black focus:ring-2 focus:ring-emerald-500 outline-none transition-all"
                   />
                 </div>
 
