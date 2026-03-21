@@ -96,7 +96,7 @@ export default function Register() {
                     type="text"
                     name="name"
                     placeholder="성함을 입력해 주세요"
-                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none transition-all"
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-black focus:ring-2 focus:ring-emerald-500 outline-none transition-all"
                   />
                 </div>
 
@@ -111,7 +111,7 @@ export default function Register() {
                       required
                       max={new Date().toISOString().split("T")[0]}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none transition-all appearance-none"
+                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-black focus:ring-2 focus:ring-emerald-500 outline-none transition-all appearance-none"
                       style={{ fontSize: "16px" }}
                     />
                     <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-emerald-600">
@@ -141,7 +141,7 @@ export default function Register() {
                     type="email"
                     name="email"
                     placeholder="example@mail.com"
-                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none transition-all"
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-black focus:ring-2 focus:ring-emerald-500 outline-none transition-all"
                   />
                 </div>
 
@@ -154,7 +154,7 @@ export default function Register() {
                     name="phone"
                     placeholder="- 없이 숫자만 입력"
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none transition-all"
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-black focus:ring-2 focus:ring-emerald-500 outline-none transition-all"
                   />
                 </div>
 
@@ -168,7 +168,7 @@ export default function Register() {
                     required
                     onChange={handleInputChange}
                     placeholder="8자 이상 입력"
-                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none transition-all"
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-black focus:ring-2 focus:ring-emerald-500 outline-none transition-all"
                   />
                 </div>
 
@@ -182,7 +182,7 @@ export default function Register() {
                     required
                     onChange={handleInputChange}
                     placeholder="한 번 더 입력"
-                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none transition-all"
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-black focus:ring-2 focus:ring-emerald-500 outline-none transition-all"
                   />
                 </div>
                 {error && (
