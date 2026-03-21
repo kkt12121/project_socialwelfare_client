@@ -120,7 +120,7 @@ export function MobileTopNavigation({
         </nav>
 
         {user ? (
-          <div className="pl-8 pr-8 pb-25 shrink-0 text-xl font-bold">
+          <div className="p-8 pb-12 shrink-0 text-xl font-bold">
             <Form action="/logout" method="post">
               <button
                 type="submit"
@@ -131,7 +131,7 @@ export function MobileTopNavigation({
             </Form>
           </div>
         ) : (
-          <div className="pl-8 pr-8 pb-25 shrink-0 text-xl font-bold">
+          <div className="p-8 pb-12 shrink-0 text-xl font-bold">
             <Link
               to="/login"
               onClick={onClose}
