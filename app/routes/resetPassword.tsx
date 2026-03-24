@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Form, useActionData, useSearchParams, Link } from "react-router";
 import { RootLayout } from "../layouts/RootLayout";
-import { ResetPwAction } from "../actions/resetPwAction";
+import { ResetPwAction } from "../fetches/actions/resetPwAction";
 
 export const action = ResetPwAction;
 

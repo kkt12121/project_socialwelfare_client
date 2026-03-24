@@ -2,7 +2,7 @@ import type { Route } from "./+types/home";
 import { Form, Link, useSubmit, useActionData } from "react-router";
 import { useState } from "react";
 import { RootLayout } from "../layouts/RootLayout";
-import { RegisterAction } from "../actions/registerAction";
+import { RegisterAction } from "../fetches/actions/registerAction";
 
 export function meta({}: Route.MetaArgs) {
   return [

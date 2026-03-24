@@ -1,5 +1,5 @@
 import { redirect, type ActionFunctionArgs } from "react-router";
-import { authCookie } from "../utils/Auth";
+import { authCookie } from "../../utils/Auth";
 
 export const LoginAction = async ({ request }: ActionFunctionArgs) => {
   const formData = await request.formData();
