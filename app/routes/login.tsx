@@ -3,9 +3,9 @@ import { useState, useEffect } from "react";
 import { Form, Link, useActionData } from "react-router";
 import type { ActionFunctionArgs } from "react-router";
 import { RootLayout } from "../layouts/RootLayout";
-import { LoginAction } from "../actions/loginAction";
+import { LoginAction } from "../fetches/actions/loginAction";
 import { FindPasswordModal } from "../components/FindPasswordModal";
-import { ForgotPwAction } from "../actions/forgotPwAction";
+import { ForgotPwAction } from "../fetches/actions/forgotPwAction";
 
 export function meta({}: Route.MetaArgs) {
   return [

@@ -1,37 +1,64 @@
 import axios from "axios";
+import { authCookie } from "./Auth";
 
 const api = axios.create({
-  baseURL: `${import.meta.env.VITE_API_BASE_URL}/`,
-  withCredentials: true, // ✅ 중요: 브라우저 쿠키를 서버로 자동 전송합니다.
+  baseURL: import.meta.env.VITE_API_BASE_URL,
 });
 
-// 응답 인터셉터: 서버의 응답을 가로채서 처리
+// 요청 인터셉터: 클라이언트 환경일 때만 쿠키에서 토큰을 자동으로 꺼내 붙임
+api.interceptors.request.use(async (config) => {
+  if (typeof window !== "undefined") {
+    const tokenData = await authCookie.parse(document.cookie);
+    if (tokenData?.accessToken) {
+      config.headers.authorization = `Bearer ${tokenData.accessToken}`;
+    }
+  }
+  return config;
+});
+
+// 응답 인터셉터: 클라이언트 환경에서 토큰 만료(401) 시 재발급 시도
 api.interceptors.response.use(
-  (response) => response, // 성공 시 그대로 반환
+  (response) => response,
   async (error) => {
     const originalRequest = error.config;
 
-    // 만약 에러 코드가 401(Unauthorized)이고, 재시도한 적이 없다면
-    if (error.response?.status === 401 && !originalRequest._retry) {
-      originalRequest._retry = true; // 무한 루프 방지용 플래그
+    // 브라우저 환경이고 401 에러이며, 재시도한 적이 없을 때만 실행
+    if (
+      typeof window !== "undefined" &&
+      error.response?.status === 401 &&
+      !originalRequest._retry
+    ) {
+      originalRequest._retry = true;
 
       try {
-        // ✅ 2단계: 만드신 재발급 API 호출
-        // 이 요청을 보낼 때 브라우저가 쿠키에 담긴 refreshToken을 서버로 보냅니다.
-        await axios.post(
+        const tokenData = await authCookie.parse(document.cookie);
+        const refreshToken = tokenData?.refreshToken;
+
+        if (!refreshToken) throw new Error("No Refresh Token");
+
+        // 재발급 요청
+        const res = await axios.get(
           `${import.meta.env.VITE_API_BASE_URL}/api/user/accessToken`,
-          {},
-          { withCredentials: true },
+          {
+            headers: { authorization: `Bearer ${refreshToken}` },
+          },
         );
 
-        console.log("요기입니다!!!!");
+        const { accessToken } = res.data;
 
-        // ✅ 3단계: 재발급 성공 시 원래 실패했던 요청을 다시 시도
+        // 쿠키에 새 토큰 저장
+        const updatedCookie = await authCookie.serialize({
+          ...tokenData,
+          accessToken: accessToken,
+        });
+        document.cookie = updatedCookie;
+
+        // 원래 실패했던 요청 재시도
+        originalRequest.headers.authorization = `Bearer ${accessToken}`;
         return api(originalRequest);
       } catch (refreshError) {
-        // ✅ 4단계: 연장권(refreshToken)마저 만료된 경우
-        console.error("세션이 만료되었습니다. 다시 로그인해 주세요.");
-        // 브라우저 단에서 로그아웃 처리 (쿠키 삭제 등)
+        // 리프레시 토큰도 만료되었을 경우 로그아웃
+        document.cookie = "auth=; Max-Age=0; path=/;";
         window.location.href = "/login";
         return Promise.reject(refreshError);
       }
