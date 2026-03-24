@@ -12,6 +12,7 @@ import { formatDate } from "../utils/formatDate";
 import { NoticeDetailLoader } from "../fetches/loaders/noticeDetailLoader";
 import { UserInfoLoader } from "../fetches/loaders/userInfoLoader";
 import { DeleteNoticeAction } from "../fetches/actions/deleteNoticeAction";
+// x
 
 export function meta({}: Route.MetaArgs) {
   return [
