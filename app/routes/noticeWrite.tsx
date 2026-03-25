@@ -110,13 +110,13 @@ export default function NoticeWrite() {
               <h2 className="text-3xl font-bold text-gray-800">
                 공지사항 작성
               </h2>
-              <p className="text-slate-500 mt-2 font-medium">
+              <p className="text-xs text-slate-500 mt-2 font-medium">
                 가담재가복지센터의 새로운 소식을 전해주세요.
               </p>
             </div>
             <button
               onClick={() => navigate(-1)}
-              className="text-slate-400 hover:text-slate-600 font-bold transition-colors text-sm mb-1"
+              className="text-slate-400 hover:text-slate-600 font-bold transition-colors text-sm mb-1 whitespace-nowrap"
             >
               취소하기
             </button>
