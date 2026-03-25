@@ -273,7 +273,7 @@ export default function Home() {
                         value={form.name}
                         onChange={handleChange}
                         placeholder="이름을 입력해주세요"
-                        className="w-full px-5 py-3 bg-white border-none rounded-xl shadow-sm focus:ring-2 focus:ring-emerald-500 transition-all placeholder:text-gray-300"
+                        className="w-full px-5 py-3 text-black bg-white border-none rounded-xl shadow-sm focus:ring-2 focus:ring-emerald-500 transition-all placeholder:text-gray-300"
                       />
                     </div>
                     <div>
@@ -290,7 +290,7 @@ export default function Home() {
                         value={form.phone}
                         onChange={handleChange}
                         placeholder="010-0000-0000"
-                        className="w-full px-5 py-3 bg-white border-none rounded-xl shadow-sm focus:ring-2 focus:ring-emerald-500 transition-all placeholder:text-gray-300"
+                        className="w-full px-5 py-3 text-black bg-white border-none rounded-xl shadow-sm focus:ring-2 focus:ring-emerald-500 transition-all placeholder:text-gray-300"
                       />
                     </div>
                     <div>
@@ -307,7 +307,7 @@ export default function Home() {
                         value={form.message}
                         onChange={handleChange}
                         placeholder="필요하신 서비스나 궁금하신 점을 자유롭게 적어주세요."
-                        className="w-full px-5 py-3 bg-white border-none rounded-xl shadow-sm focus:ring-2 focus:ring-emerald-500 transition-all resize-none placeholder:text-gray-300"
+                        className="w-full px-5 py-3 text-black bg-white border-none rounded-xl shadow-sm focus:ring-2 focus:ring-emerald-500 transition-all resize-none placeholder:text-gray-300"
                       />
                     </div>
                     <div className="pt-2">
