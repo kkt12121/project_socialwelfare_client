@@ -14,13 +14,6 @@ interface NoticeItems {
   created_at: string;
 }
 
-// interface UserInfo {
-//   id: number;
-//   name: string;
-//   email: string;
-//   super: number;
-// }
-
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "가담재가복지센터" },
@@ -68,7 +61,7 @@ export default function Notice() {
           <div className="border-b-2 border-gray-900 pb-4 mb-6 flex justify-between items-end">
             <div>
               <h2 className="text-3xl font-bold text-gray-800">공지사항</h2>
-              <p className="text-gray-500 mt-2">
+              <p className="text-xs text-gray-500 mt-2">
                 새로운 소식과 안내를 전달해 드립니다.
               </p>
             </div>
@@ -77,7 +70,7 @@ export default function Notice() {
               <div className="bg-emerald-600 text-white rounded-lg text-sm font-semibold hover:bg-emerald-700 transition-all shadow-md overflow-hidden">
                 <Link
                   to="/notice/write"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 w-full h-full"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 w-full h-full whitespace-nowrap"
                 >
                   <span>작성하기</span>
                 </Link>

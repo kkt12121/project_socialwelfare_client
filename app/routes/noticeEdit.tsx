@@ -120,13 +120,13 @@ export default function EditNotice() {
               <h2 className="text-3xl font-bold text-gray-800">
                 공지사항 수정
               </h2>
-              <p className="text-slate-500 mt-2 font-medium text-emerald-600">
+              <p className="text-xs text-slate-500 mt-2 font-medium">
                 기존 소식을 수정하거나 내용을 보완해보세요.
               </p>
             </div>
             <button
               onClick={() => navigate(-1)}
-              className="text-slate-400 hover:text-slate-600 font-bold transition-colors text-sm mb-1"
+              className="text-slate-400 hover:text-slate-600 font-bold transition-colors text-sm mb-1 whitespace-nowrap"
             >
               취소하기
             </button>
