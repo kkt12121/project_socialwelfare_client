@@ -45,7 +45,7 @@ export function Footer() {
           </p>
         </div>
 
-        <div className="flex gap-6 text-sm font-medium self-end md:self-center">
+        <div className="flex justify-first gap-6 text-sm font-medium w-full md:w-auto">
           <span className="hover:text-white cursor-pointer transition-colors">
             이용약관
           </span>
