@@ -231,8 +231,11 @@ export default function Home() {
                   </div>
 
                   <div className="space-y-4">
-                    <div className="flex items-center gap-4 group">
-                      <div className="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center">
+                    <a
+                      href="tel:0337467579"
+                      className="flex items-center gap-4 group cursor-pointer"
+                    >
+                      <div className="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
                         <svg
                           className="w-6 h-6"
                           fill="none"
@@ -249,11 +252,11 @@ export default function Home() {
                       </div>
                       <div>
                         <p className="text-sm text-gray-400">빠른 전화 상담</p>
-                        <p className="text-xl font-bold text-gray-800 tracking-wider">
+                        <p className="text-xl font-bold text-gray-800 tracking-wider group-hover:text-emerald-600 transition-colors">
                           033-746-7579
                         </p>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
 
@@ -352,7 +355,7 @@ export default function Home() {
                       <span className="text-[10px] font-bold bg-gray-800 px-2 py-1 rounded text-gray-500 uppercase tracking-tighter">
                         Email
                       </span>
-                      <span className="text-white font-medium md:text-lg">
+                      <span className="text-white font-bold text-2xl tracking-tight">
                         topgold777@naver.com
                       </span>
                     </div>
@@ -360,7 +363,7 @@ export default function Home() {
                       <span className="text-[10px] font-bold bg-gray-800 px-2 py-1 rounded text-gray-500 uppercase tracking-tighter">
                         Tel
                       </span>
-                      <span className="text-white font-black text-2xl md:text-3xl tracking-tight">
+                      <span className="text-white font-bold text-2xl tracking-tight">
                         033-746-7579
                       </span>
                     </div>
