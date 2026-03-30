@@ -66,7 +66,7 @@ export default function Notice() {
               </p>
             </div>
 
-            {user && Number(user.super) === 1 && (
+            {user && Number(user.data.super) === 1 && (
               <div className="bg-emerald-600 text-white rounded-lg text-sm font-semibold hover:bg-emerald-700 transition-all shadow-md overflow-hidden">
                 <Link
                   to="/notice/write"
