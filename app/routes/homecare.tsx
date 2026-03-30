@@ -310,14 +310,14 @@ export default function HomeCare() {
 
                 <div className="flex flex-wrap gap-3">
                   <a
-                    href="/service/apply"
-                    className="inline-flex items-center gap-2 rounded-full bg-mint-500 px-8 py-4 font-semibold text-white hover:bg-mint-600 transition"
+                    href="tel:0337467579"
+                    className="inline-flex items-center gap-2 rounded-full bg-mint-500 px-8 py-4 font-semibold border border-white/20 text-white hover:bg-mint-600 transition"
                   >
                     <IconPhone />
                     상담 신청하기
                   </a>
                   <a
-                    href="/contact"
+                    href="/map"
                     className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-8 py-4 font-semibold text-white hover:bg-white/15 transition"
                   >
                     <IconMap />

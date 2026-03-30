@@ -97,7 +97,7 @@ export default function NoticeDetail() {
                   {formatDate(notice.created_at)}
                 </span>
               </div>
-              {user && Number(user.super) === 1 && (
+              {user && Number(user.data.super) === 1 && (
                 <button
                   onClick={handleDelete}
                   disabled={isDeleting}
@@ -126,7 +126,7 @@ export default function NoticeDetail() {
               목록보기
             </button>
 
-            {user && Number(user.super) === 1 && (
+            {user && Number(user.data.super) === 1 && (
               <button
                 onClick={() => navigate(`/notice/edit/${notice.id}`)}
                 className="px-6 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-semibold hover:bg-gray-200 transition-all shadow-sm cursor-pointer border border-gray-200"

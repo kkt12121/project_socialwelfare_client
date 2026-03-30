@@ -16,7 +16,7 @@ export const UserInfoLoader = async ({ request }: LoaderFunctionArgs) => {
       headers: { authorization: `Bearer ${tokenData.accessToken}` },
     });
 
-    return response.data;
+    return data(response.data);
   } catch (error: any) {
     if (error.response?.status === 401 && tokenData.refreshToken) {
       try {
@@ -42,6 +42,5 @@ export const UserInfoLoader = async ({ request }: LoaderFunctionArgs) => {
         return null;
       }
     }
-    return null;
   }
 };
